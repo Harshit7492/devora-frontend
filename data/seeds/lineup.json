@@ -1,0 +1,24 @@
+{
+  "todayLabel": "Today, Sat 25 Apr",
+  "weekLabels": [
+    "09 Mar",
+    "16 Mar",
+    "23 Mar",
+    "30 Mar",
+    "06 Apr",
+    "13 Apr",
+    "20 Apr",
+    "27 Apr",
+    "04 May",
+    "11 May",
+    "18 May",
+    "25 May",
+    "01 Jun"
+  ],
+  "emptyState": {
+    "title": "Welcome to the Lineup!",
+    "description": "Plot projects on a timeline for a visual snapshot of what's in play, who's working on what, and when projects start and end.",
+    "linkLabel": "Add start/end dates to a project",
+    "suffix": "to view it on the Lineup."
+  }
+}

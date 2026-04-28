@@ -1,0 +1,42 @@
+{
+  "reports": [
+    { "id": "all-latest", "label": "All the latest activity", "icon": "🕒" },
+    { "id": "someone-activity", "label": "Someone's activity", "icon": "💼" },
+    { "id": "someone-assignments", "label": "Someone's assignments", "icon": "🧑" },
+    { "id": "mission-control", "label": "Mission Control", "icon": "🛰️" },
+    { "id": "hilltop-view", "label": "Hilltop View", "icon": "⛰️" },
+    { "id": "todos-completed", "label": "To-dos added & completed", "icon": "✅" },
+    { "id": "overdue", "label": "Overdue to-dos", "icon": "🔔" },
+    { "id": "unassigned", "label": "Unassigned work", "icon": "📥" },
+    { "id": "upcoming", "label": "Upcoming dates", "icon": "🗓️" }
+  ],
+  "items": [
+    {
+      "id": "a1",
+      "project": "eNetra Field Survey App",
+      "author": "Tinku k.",
+      "summary": "checked off Dashboard: In the \"All Surveyors\" section, when the user selects any surveyor profile and clicks on \"Surveys Attempted,\" it shows 34 on the dashboard, but at the bottom of the page, the total survey count is displayed as around 21,000.",
+      "details": "Dashboard count mismatch noted and marked complete.",
+      "time": "10:58am",
+      "day": "Today"
+    },
+    {
+      "id": "a2",
+      "project": "eNetra Field Survey App",
+      "author": "Harshit s.",
+      "summary": "commented on In Surveyor-wise Consolidated Summary If user choose any ward it will show the same count of sur...",
+      "details": "Tinku Niranjan fixed",
+      "time": "3:41pm",
+      "day": "Earlier"
+    },
+    {
+      "id": "a3",
+      "project": "eNetra Field Survey App",
+      "author": "Harshit s.",
+      "summary": "commented on When the user clicks on \"Total Certified Surveys by NPP,\" it redirects to the same screen instead...",
+      "details": "Tinku fixed",
+      "time": "3:40pm",
+      "day": "Earlier"
+    }
+  ]
+}

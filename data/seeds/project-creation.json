@@ -1,0 +1,53 @@
+{
+  "title": "Start with the basics",
+  "templateLinkLabel": "Create a project template",
+  "namePlaceholder": "e.g. Office Renovation",
+  "descriptionPlaceholder": "e.g. Plans and scheduling for expanding the office",
+  "scheduleLinkLabel": "Add start/end dates",
+  "toolsTitle": "Choose your tools",
+  "toolsSubtitle": "You can always change tools later.",
+  "inviteTitle": "Choose who's on the project",
+  "inviteSubtitle": "This project is invite-only. Only people who are explicitly invited can see this project (change)",
+  "invitePlaceholder": "Type their names here...",
+  "inviteNoteLabel": "Add an invite note",
+  "submitLabel": "Create this project",
+  "footerNote": "What happens next? We'll drop you right on your project so you can get started. Anyone invited will be notified so they can join in.",
+  "tools": [
+    {
+      "id": "message-board",
+      "label": "Message Board",
+      "description": "Post announcements, pitch ideas, progress updates, etc. and keep feedback on-topic.",
+      "enabled": true
+    },
+    {
+      "id": "todos",
+      "label": "To-dos",
+      "description": "Make lists of work that needs to get done, assign items, set due dates, and discuss.",
+      "enabled": true
+    },
+    {
+      "id": "docs-files",
+      "label": "Docs & Files",
+      "description": "Share docs, files, images, and spreadsheets. Organize in folders so they're easy to find.",
+      "enabled": true
+    },
+    {
+      "id": "chat",
+      "label": "Chat",
+      "description": "Chat casually with the group, ask random questions, and share stuff without ceremony.",
+      "enabled": true
+    },
+    {
+      "id": "schedule",
+      "label": "Schedule",
+      "description": "Set important dates on a shared schedule. Subscribe to events in Google Cal, iCal, or Outlook.",
+      "enabled": true
+    },
+    {
+      "id": "card-table",
+      "label": "Card Table",
+      "description": "A visual, kanban-like tool for process-oriented work. Establish a workflow and move cards across columns.",
+      "enabled": false
+    }
+  ]
+}

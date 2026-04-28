@@ -1,0 +1,51 @@
+{
+  "description": "Organization chat for shared signals, team-wide decisions, and cross-project coordination.",
+  "channels": [
+    { "id": "general", "name": "general", "description": "Company-wide updates and daily coordination", "unread": 3 },
+    { "id": "engineering", "name": "engineering", "description": "Frontend, backend, infra, and delivery blockers", "unread": 1 },
+    { "id": "client-updates", "name": "client-updates", "description": "Messages that affect external communication" },
+    { "id": "announcements", "name": "announcements", "description": "High-signal notices only" }
+  ],
+  "messages": [
+    {
+      "id": "m1",
+      "channelId": "general",
+      "author": "Rhea S.",
+      "role": "Manager",
+      "time": "09:10",
+      "body": "Morning sync stays async today. Post blockers here before 11:30."
+    },
+    {
+      "id": "m2",
+      "channelId": "general",
+      "author": "Miles K.",
+      "role": "Developer",
+      "time": "09:18",
+      "body": "Auth fix is ready for review. QA can start after the staging deploy lands."
+    },
+    {
+      "id": "m3",
+      "channelId": "engineering",
+      "author": "Ari V.",
+      "role": "Developer",
+      "time": "10:02",
+      "body": "Need confirmation on websocket reconnect behavior before I merge the next pass."
+    },
+    {
+      "id": "m4",
+      "channelId": "client-updates",
+      "author": "Jules N.",
+      "role": "Client Success",
+      "time": "10:20",
+      "body": "Acme wants a tighter summary on launch risks. Keep anything client-safe in this thread."
+    },
+    {
+      "id": "m5",
+      "channelId": "announcements",
+      "author": "Devora Ops",
+      "role": "System",
+      "time": "08:45",
+      "body": "Production notifications are stable. Browser and email delivery are both active."
+    }
+  ]
+}

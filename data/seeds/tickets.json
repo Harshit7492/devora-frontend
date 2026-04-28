@@ -1,0 +1,46 @@
+[
+  {
+    "id": "t_1",
+    "key": "DEV-101",
+    "title": "Stabilize auth redirect handling",
+    "summary": "Finish login success routing and preserve instance-scoped post-auth entry.",
+    "status": "todo",
+    "priority": "high",
+    "assignee": { "id": "usr_1", "name": "Rhea S.", "email": "rhea@devora.app", "role": "owner" },
+    "dueDate": "2026-04-28",
+    "points": 5
+  },
+  {
+    "id": "t_2",
+    "key": "DEV-102",
+    "title": "Model websocket sync for ticket updates",
+    "summary": "Invalidate query slices on ticket events and keep layout state isolated from data caching.",
+    "status": "in_progress",
+    "priority": "critical",
+    "assignee": { "id": "usr_3", "name": "Miles K.", "email": "miles@devora.app", "role": "member" },
+    "dueDate": "2026-04-29",
+    "points": 8
+  },
+  {
+    "id": "t_3",
+    "key": "DEV-103",
+    "title": "Add project sheet view",
+    "summary": "Expose a table-driven inspection surface for sorting, scanning, and bulk updates.",
+    "status": "backlog",
+    "priority": "medium",
+    "assignee": { "id": "usr_4", "name": "Ari V.", "email": "ari@devora.app", "role": "member" },
+    "dueDate": "2026-05-02",
+    "points": 3
+  },
+  {
+    "id": "t_4",
+    "key": "DEV-104",
+    "title": "Polish milestone timeline",
+    "summary": "Show delivery sequencing with a clean milestone-first visual hierarchy.",
+    "status": "done",
+    "priority": "low",
+    "assignee": { "id": "usr_5", "name": "Jules N.", "email": "jules@devora.app", "role": "admin" },
+    "dueDate": "2026-04-24",
+    "points": 2
+  }
+]

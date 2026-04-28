@@ -1,0 +1,40 @@
+{
+  "hero": {
+    "title": "Everything important, without the feeling of navigating software.",
+    "description": "Start work, invite people, or jump anywhere with command. Home stays calm and keeps the next move obvious.",
+    "primaryCta": "Make a new project",
+    "secondaryCta": "Invite people",
+    "listLinkLabel": "View all projects in a list",
+    "templateLinkLabel": "View templates"
+  },
+  "recentProjects": [
+    {
+      "name": "Launchpad Workspace",
+      "client": "Acme Product",
+      "description": "Release coordination, QA fixes, client review notes, and launch readiness in one project space.",
+      "members": ["RS", "MK", "AV", "JN", "+6"],
+      "workspace": "product",
+      "project": "launchpad",
+      "view": "board"
+    },
+    {
+      "name": "Field Survey App",
+      "client": "eNetra",
+      "description": "Survey delivery, issue intake, stakeholder comments, and deployment follow-up for field teams.",
+      "members": ["AM", "DV", "PT", "RK", "+2"],
+      "workspace": "research",
+      "project": "survey-app",
+      "view": "board"
+    }
+  ],
+  "scheduleItems": [
+    { "time": "11:00", "title": "Launch review", "meta": "Acme + core team" },
+    { "time": "14:30", "title": "Bug triage", "meta": "Auth and QA" },
+    { "time": "17:00", "title": "Client recap", "meta": "Status summary" }
+  ],
+  "assignments": [
+    "Reply to two client comments on launch checklist",
+    "Review login regression before EOD",
+    "Finalize copy updates for release board"
+  ]
+}

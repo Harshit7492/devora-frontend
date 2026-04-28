@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Auth policy",
+    "description": "JWT transport, session persistence, and instance-scoped identity mapping.",
+    "icon": "shield"
+  },
+  {
+    "title": "Realtime channels",
+    "description": "Websocket events can be toggled per workspace to reduce noisy sync paths.",
+    "icon": "bell"
+  },
+  {
+    "title": "Data cache",
+    "description": "Query stale times, mutation invalidation, and optimistic sync behavior live here.",
+    "icon": "database"
+  }
+]
