@@ -129,7 +129,10 @@ export function TicketBoard({ scope }: TicketBoardProps) {
                                 <CardTitle className="text-base leading-6">{ticket.title}</CardTitle>
                               </CardHeader>
                               <CardContent className="space-y-3 p-4 pt-0">
-                                <p className="text-sm leading-6 text-muted-foreground line-clamp-2">{ticket.summary}</p>
+                                <div 
+                                  className="text-sm leading-6 text-muted-foreground line-clamp-2 prose prose-sm dark:prose-invert prose-p:m-0 prose-p:leading-6"
+                                  dangerouslySetInnerHTML={{ __html: ticket.summary }}
+                                />
                                 <div className="flex items-center justify-between text-xs uppercase tracking-[0.16em] text-muted-foreground">
                                   <span>{ticket.assignee?.name || "Unassigned"}</span>
                                   <span>{ticket.points} pts</span>
