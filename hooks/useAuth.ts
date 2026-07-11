@@ -34,7 +34,7 @@ export function useAuth() {
     onSuccess: (response) => {
       setSession(response);
       toast.success("Account created");
-      router.push(`/${response.user.instanceId || "acme"}/home`);
+      router.push(`/${response.user.instanceId || "acme"}/onboarding/welcome`);
     },
     onError: (err) => toast.error(extractError(err)),
   });

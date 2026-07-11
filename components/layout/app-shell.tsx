@@ -8,6 +8,7 @@ import { useAuthStore } from "@/store/auth.store";
 import { AppNavbar } from "./app-navbar";
 import { CommandPalette } from "./command-palette";
 import { FloatingActions } from "./floating-actions";
+import { BottomNav } from "./bottom-nav";
 
 type AppShellProps = {
   children: React.ReactNode;
@@ -32,6 +33,7 @@ export function AppShell({ children, instance }: AppShellProps) {
       </main>
       <CommandPalette instance={instance} />
       <FloatingActions instance={instance} />
+      <BottomNav />
     </div>
   );
 }
