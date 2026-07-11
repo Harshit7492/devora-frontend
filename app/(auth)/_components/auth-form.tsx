@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
-import { useAuth } from "@/hooks/useAuth";
+
 
 const loginSchema = z.object({
   email: z.string().email("Enter a valid email"),
@@ -40,7 +40,7 @@ export function AuthForm({ mode }: AuthFormProps) {
 
   const isLogin = mode === "login";
   const [pendingMode, setPendingMode] = useState<AuthMode>(mode);
-  const { login, signup } = useAuth();
+  const [isPending, setIsPending] = useState(false);
 
   const form = useForm<LoginValues | SignupValues>({
     resolver: zodResolver(isLogin ? loginSchema : signupSchema),
@@ -56,25 +56,21 @@ export function AuthForm({ mode }: AuthFormProps) {
         },
   });
 
-  const isPending = login.isPending || signup.isPending;
-
   const handleSubmit = async (values: LoginValues | SignupValues) => {
     setPendingMode(mode);
+    setIsPending(true);
 
-    if (isLogin) {
-      await login.mutateAsync(values as LoginValues, {
-        onSuccess: (response) => {
-          if (redirect) router.push(redirect);
-        },
-      });
-      return;
+    // Simulate API delay
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    if (redirect) {
+      router.push(redirect);
+    } else {
+      // Redirecting to /default/home instead of / to avoid loop since / redirects to /login
+      router.push("/default/home");
     }
-
-    await signup.mutateAsync(values as SignupValues, {
-      onSuccess: (response) => {
-        if (redirect) router.push(redirect);
-      },
-    });
+    
+    setIsPending(false);
   };
 
   return (
