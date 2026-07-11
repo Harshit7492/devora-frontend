@@ -28,7 +28,26 @@ export function useTickets(scope: TicketScope) {
 
   const updateTicket = useMutation({
     mutationFn: (payload: UpdateTicketPayload) => ticketService.update(scope, payload),
-    onSuccess: async () => {
+    onMutate: async (newTicket) => {
+      await queryClient.cancelQueries({ queryKey });
+      const previousTickets = queryClient.getQueryData<any[]>(queryKey);
+      
+      if (previousTickets) {
+        queryClient.setQueryData(queryKey, (old: any[]) => {
+          if (!old) return old;
+          return old.map((ticket) => 
+            ticket.id === newTicket.ticketId ? { ...ticket, ...newTicket.data } : ticket
+          );
+        });
+      }
+      return { previousTickets };
+    },
+    onError: (err, newTicket, context) => {
+      if (context?.previousTickets) {
+        queryClient.setQueryData(queryKey, context.previousTickets);
+      }
+    },
+    onSettled: async () => {
       await queryClient.invalidateQueries({ queryKey });
     },
   });

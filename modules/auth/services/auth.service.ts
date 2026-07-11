@@ -1,18 +1,43 @@
-import { api } from "@/lib/api";
 import type { User } from "@/types/user";
 
 type LoginPayload = { email: string; password: string };
 type SignupPayload = LoginPayload & { name: string };
 
-export type AuthResponse = { token: string; user: User };
+export type AuthResponse = { token: string; user: User & { instanceId?: string } };
+
+const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
 export const authService = {
-  login: (payload: LoginPayload) =>
-    api.post<AuthResponse>("/auth/login", payload).then((r) => r.data),
+  login: async (payload: LoginPayload): Promise<AuthResponse> => {
+    await delay(1000);
+    return {
+      token: "mock_jwt_token_12345",
+      user: {
+        id: "usr_mock123",
+        name: "Test User",
+        email: payload.email,
+        role: "owner",
+        instanceId: "acme",
+      },
+    };
+  },
 
-  signup: (payload: SignupPayload) =>
-    api.post<AuthResponse>("/auth/signup", payload).then((r) => r.data),
+  signup: async (payload: SignupPayload): Promise<AuthResponse> => {
+    await delay(1000);
+    return {
+      token: "mock_jwt_token_12345",
+      user: {
+        id: "usr_mock123",
+        name: payload.name,
+        email: payload.email,
+        role: "owner",
+        instanceId: "acme",
+      },
+    };
+  },
 
-  logout: () =>
-    api.post("/auth/logout").then((r) => r.data),
+  logout: async () => {
+    await delay(500);
+    return { success: true };
+  },
 };
