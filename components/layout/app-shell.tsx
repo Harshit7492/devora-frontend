@@ -9,6 +9,7 @@ import { AppNavbar } from "./app-navbar";
 import { CommandPalette } from "./command-palette";
 import { FloatingActions } from "./floating-actions";
 import { BottomNav } from "./bottom-nav";
+import { PingsPanel } from "./pings-panel";
 
 type AppShellProps = {
   children: React.ReactNode;
@@ -34,6 +35,7 @@ export function AppShell({ children, instance }: AppShellProps) {
       <CommandPalette instance={instance} />
       <FloatingActions instance={instance} />
       <BottomNav />
+      <PingsPanel />
     </div>
   );
 }
